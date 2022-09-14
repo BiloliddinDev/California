@@ -6,12 +6,12 @@ html {
 *::after,
 *::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
   font-family: "Inter", "Arial", sans-serif;
   background-color: #f2f2f2;
   height: 100vh;
@@ -362,4 +362,534 @@ template {
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/readex-pro-v10-latin-regular.woff2") format("woff2"), url("../fonts/readex-pro-v10-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  height: 80px;
+  padding: 30px 0;
+}
+.header__wraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.header__link {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.5s linear;
+  color: #000000;
+}
+.header__link:hover {
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+}
+.header__box {
+  display: flex;
+  gap: 30px;
+}
+.header__bars {
+  display: none;
+}
+
+@media only screen and (max-width: 850px) {
+  .header__list {
+    display: none;
+  }
+  .header__bars {
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .header__link-shop {
+    display: none;
+  }
+  .header__link-search {
+    display: none;
+  }
+}
+.hero {
+  margin-top: 80px;
+  background-color: #dce5e2;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 32px;
+}
+.hero__wraper {
+  padding-right: 20px;
+  margin-left: 56px;
+}
+.hero__heading {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 70px;
+  margin: 0;
+  margin-top: 145px;
+  margin-bottom: 20px;
+}
+.hero__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  max-width: 565px;
+  margin-bottom: 30px;
+}
+.hero__btn {
+  padding: 14px 53px;
+  border-radius: 32px;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 1320px) {
+  .hero {
+    border-radius: 0;
+  }
+  .hero__wraper {
+    margin-left: 10px;
+    padding: 0;
+  }
+  .hero__heading {
+    font-family: "Readex Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 65px;
+    margin: 0;
+    margin-top: 145px;
+    margin-bottom: 20px;
+  }
+  .hero__img {
+    width: 550px;
+    height: 450px;
+  }
+  .hero__btn {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .hero {
+    align-items: center;
+  }
+  .hero__heading {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .hero__img {
+    width: 500px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .hero {
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__heading {
+    max-width: 550px;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .hero__img {
+    width: 350px;
+    height: 250px;
+  }
+  .hero__heading {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+  .hero__text {
+    font-style: 12px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .hero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .hero__img {
+    width: 250px;
+    height: 150px;
+  }
+}
+.shop {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shop__heading {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 52px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.shop__text {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  max-width: 628px;
+  margin-bottom: 55px;
+}
+.shop__wraper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 2fr);
+  gap: 16px;
+  grid-template-areas: "bk bk bk tm tm tb tb " "bk bk bk tm tm tb tb " "bk bk bk tm tm tb tb " "wt wt wt tm tm tb tb " "wt wt wt tm tm tb tb ";
+}
+.shop__card1 {
+  padding-left: 42px;
+  grid-area: bk;
+  width: 640px;
+  height: 472px;
+  background: #ffffff;
+  border-radius: 32px;
+  text-align: end;
+}
+.shop__img1 {
+  margin-right: 97px;
+  width: 450px;
+  height: 350px;
+  display: flex;
+}
+.shop__span {
+  margin-right: 42px;
+}
+.shop__lorem1 {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  margin-right: 42px;
+}
+.shop__card2 {
+  grid-area: tm;
+  width: 312px;
+  height: 792px;
+  background: #ffffff;
+  border-radius: 32px;
+  overflow: hidden;
+}
+.shop__lorem2 {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+}
+.shop__span2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  text-align: center;
+}
+.shop__img2 {
+  margin-top: 144px;
+  width: 312px;
+  margin-bottom: 40px;
+}
+.shop__card3 {
+  text-align: center;
+  grid-area: tb;
+  background: #ffffff;
+  border-radius: 32px;
+  width: 312px;
+  height: 792px;
+  overflow: hidden;
+}
+.shop__span3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 114px;
+}
+.shop__lorem3 {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 42px;
+}
+.shop__img3 {
+  width: 312px;
+}
+.shop__card4 {
+  grid-area: wt;
+  background: #ffffff;
+  border-radius: 32px;
+  width: 640px;
+  height: 270px;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+.shop__lorem4 {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  flex-grow: 1;
+  align-self: center;
+  margin-left: 46px;
+  display: flex;
+  flex-direction: column;
+}
+.shop__lorem4::before {
+  content: "Watch";
+  width: 47px;
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+}
+.shop__img4 {
+  width: 380px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .shop__card1 {
+    width: 540px;
+    height: 400px;
+  }
+  .shop__img1 {
+    width: 400px;
+    height: 300px;
+  }
+  .shop__card2 {
+    width: 280px;
+    height: 700px;
+  }
+  .shop__img2 {
+    width: 250px;
+  }
+  .shop__card3 {
+    width: 280px;
+    height: 700px;
+  }
+  .shop__card4 {
+    width: 540px;
+    height: 250px;
+  }
+  .shop__img4 {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 1135px) {
+  .shop__wraper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 2fr);
+    gap: 16px;
+    grid-template-areas: "bk bk bk bk bk bk " "bk bk bk bk bk bk " "bk bk bk bk bk bk " "tm tm tm tb tb tb " "tm tm tm tb tb tb " "wt wt wt wt wt wt " "wt wt wt wt wt wt";
+  }
+  .shop__card1 {
+    width: 800px;
+  }
+  .shop__card2 {
+    width: 400px;
+  }
+  .shop__img2 {
+    width: 400px;
+  }
+  .shop__card3 {
+    width: 400px;
+  }
+  .shop__img3 {
+    width: 400px;
+  }
+  .shop__card4 {
+    width: 100%;
+  }
+  .shop__img4 {
+    width: 300px;
+    margin-left: 30px;
+  }
+  .shop__lorem4 {
+    margin-left: 120px;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .shop__card1 {
+    width: 500px;
+  }
+  .shop__card2 {
+    width: 250px;
+  }
+  .shop__card3 {
+    width: 250px;
+  }
+  .shop__card4 {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .shop {
+    text-align: center;
+  }
+  .shop__wraper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 16px;
+    grid-template-areas: "bk bk bk bk bk bk " "tm tm tm tm tm tm " "tb tb tb tb tb tb " "wt wt wt wt wt wt ";
+  }
+  .shop__card1 {
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+    height: 400px;
+  }
+  .shop__card2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0;
+  }
+  .shop__card3 {
+    border-radius: 0;
+    width: 100%;
+  }
+  .shop__card4 {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0;
+  }
+  .shop__img4 {
+    margin: 0;
+    padding: 0;
+  }
+  .shop__lorem4 {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .shop__card1 {
+    width: 300px;
+    display: grid;
+    place-items: center;
+    text-align: justify;
+  }
+  .shop__lorem1 {
+    margin: 0;
+    text-align: center;
+  }
+  .shop__span {
+    margin: 0;
+  }
+  .shop__img1 {
+    width: 200px;
+    height: 150px;
+    margin: 0;
+  }
+  .shop__card2 {
+    width: 300px;
+    display: grid;
+    place-items: center;
+    height: 400px;
+  }
+  .shop__lorem2 {
+    margin: 0;
+  }
+  .shop__span2 {
+    margin: 0;
+  }
+  .shop__img2 {
+    margin: 0;
+    width: 200px;
+    height: 150px;
+  }
+  .shop__card3 {
+    width: 300px;
+    height: 400px;
+    display: grid;
+    place-items: center;
+  }
+  .shop__img3 {
+    width: 200px;
+    height: 150px;
+  }
+  .shop__card4 {
+    flex-direction: column;
+    align-items: center;
+    display: grid;
+    place-items: center;
+    width: 300px;
+  }
+  .shop__img4 {
+    width: 200px;
+    height: 150px;
+  }
+}
+.save {
+  margin-top: 80px;
+  text-align: center;
+}
+.save__wraper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1, 1fr;
+  gap: 70px;
+}
+.save__heading {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 52px;
+}
+.save__text {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  margin-bottom: 60px;
+}
+.save__card {
+  display: grid;
+  text-align: left;
 }/*# sourceMappingURL=main.css.map */

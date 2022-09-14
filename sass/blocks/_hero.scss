@@ -1,0 +1,129 @@
+.hero {
+  margin-top: 80px;
+  background-color: $darkgray;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 32px;
+
+  &__wraper {
+    padding-right: 20px;
+    margin-left: 56px;
+  }
+
+  &__heading {
+    font-family: "Readex Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 70px;
+    margin: 0;
+    margin-top: 145px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 565px;
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    padding: 14px 53px;
+    border-radius: 32px;
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  .hero {
+    border-radius: 0;
+    &__wraper {
+      margin-left: 10px;
+      padding: 0;
+    }
+    &__heading {
+      font-family: "Readex Pro";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 55px;
+      line-height: 65px;
+      margin: 0;
+      margin-top: 145px;
+      margin-bottom: 20px;
+    }
+
+    &__img {
+      width: 550px;
+      height: 450px;
+    }
+
+    &__btn {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .hero {
+    align-items: center;
+    &__heading {
+      font-size: 45px;
+      line-height: 50px;
+    }
+
+    &__img {
+      width: 500px;
+      height: 400px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .hero {
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+
+    &__heading {
+      max-width: 550px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero {
+    &__img {
+      width: 350px;
+      height: 250px;
+    }
+
+    &__heading {
+      margin-top: 20px;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 40px;
+    }
+    &__text {
+      font-style: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .hero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    &__img {
+      width: 250px;
+      height: 150px;
+    }
+  }
+}

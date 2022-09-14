@@ -1,0 +1,403 @@
+.shop {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__heading {
+    font-family: "Readex Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 52px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-family: "Readex Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    max-width: 628px;
+    margin-bottom: 55px;
+  }
+
+  &__wraper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 2fr);
+    gap: 16px;
+    grid-template-areas:
+      "bk bk bk tm tm tb tb "
+      "bk bk bk tm tm tb tb "
+      "bk bk bk tm tm tb tb "
+      "wt wt wt tm tm tb tb "
+      "wt wt wt tm tm tb tb ";
+  }
+
+  &__card1 {
+    padding-left: 42px;
+    grid-area: bk;
+    width: 640px;
+    height: 472px;
+    background: #ffffff;
+    border-radius: 32px;
+    text-align: end;
+  }
+
+  &__img1 {
+    margin-right: 97px;
+    width: 450px;
+    height: 350px;
+    display: flex;
+  }
+
+  &__span {
+    margin-right: 42px;
+  }
+
+  &__lorem1 {
+    font-family: "Readex Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    margin-right: 42px;
+  }
+
+  &__card2 {
+    grid-area: tm;
+    width: 312px;
+    height: 792px;
+    background: #ffffff;
+    border-radius: 32px;
+    overflow: hidden;
+  }
+
+  &__lorem2 {
+    font-family: "Readex Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  &__span2 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+  }
+
+  &__img2 {
+    margin-top: 144px;
+    width: 312px;
+    margin-bottom: 40px;
+  }
+
+  &__card3 {
+    text-align: center;
+    grid-area: tb;
+    background: #ffffff;
+    border-radius: 32px;
+    width: 312px;
+    height: 792px;
+    overflow: hidden;
+  }
+
+  &__span3 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 114px;
+  }
+
+  &__lorem3 {
+    font-family: "Readex Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 42px;
+  }
+
+  &__img3 {
+    width: 312px;
+  }
+
+  &__card4 {
+    grid-area: wt;
+    background: #ffffff;
+    border-radius: 32px;
+    width: 640px;
+    height: 270px;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+  }
+
+  &__lorem4 {
+    font-family: "Readex Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    flex-grow: 1;
+    align-self: center;
+    margin-left: 46px;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      content: "Watch";
+      width: 47px;
+      height: 20px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 19px;
+    }
+  }
+
+  &__img4 {
+    width: 380px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .shop {
+    &__card1 {
+      width: 540px;
+      height: 400px;
+    }
+
+    &__img1 {
+      width: 400px;
+      height: 300px;
+    }
+
+    &__card2 {
+      width: 280px;
+      height: 700px;
+    }
+
+    &__img2 {
+      width: 250px;
+    }
+
+    &__card3 {
+      width: 280px;
+      height: 700px;
+    }
+
+    &__card4 {
+      width: 540px;
+      height: 250px;
+    }
+
+    &__img4 {
+      width: 300px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1135px) {
+  .shop {
+    &__wraper {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 2fr);
+      gap: 16px;
+      grid-template-areas:
+        "bk bk bk bk bk bk "
+        "bk bk bk bk bk bk "
+        "bk bk bk bk bk bk "
+        "tm tm tm tb tb tb "
+        "tm tm tm tb tb tb "
+        "wt wt wt wt wt wt "
+        "wt wt wt wt wt wt";
+    }
+
+    &__card1 {
+      width: 800px;
+    }
+
+    &__card2 {
+      width: 400px;
+    }
+
+    &__img2 {
+      width: 400px;
+    }
+
+    &__card3 {
+      width: 400px;
+    }
+
+    &__img3 {
+      width: 400px;
+    }
+
+    &__card4 {
+      width: 100%;
+    }
+
+    &__img4 {
+      width: 300px;
+      margin-left: 30px;
+    }
+
+    &__lorem4 {
+      margin-left: 120px;
+    }
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .shop {
+    &__card1 {
+      width: 500px;
+    }
+
+    &__card2 {
+      width: 250px;
+    }
+
+    &__card3 {
+      width: 250px;
+    }
+
+    &__card4 {
+      width: 500px;
+    }
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .shop {
+    text-align: center;
+    &__wraper {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      gap: 16px;
+      grid-template-areas:
+        "bk bk bk bk bk bk "
+        "tm tm tm tm tm tm "
+        "tb tb tb tb tb tb "
+        "wt wt wt wt wt wt ";
+    }
+    &__card1 {
+      border-radius: 0;
+      width: 100%;
+      margin: 0;
+      height: 400px;
+    }
+    &__card2 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 0;
+    }
+
+    &__card3 {
+      border-radius: 0;
+      width: 100%;
+    }
+
+    &__card4 {
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 0;
+    }
+
+    &__img4 {
+      margin: 0;
+      padding: 0;
+    }
+
+    &__lorem4 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .shop {
+    &__card1 {
+      width: 300px;
+      display: grid;
+      place-items: center;
+      text-align: justify;
+    }
+
+    &__lorem1 {
+      margin: 0;
+      text-align: center;
+    }
+
+    &__span {
+      margin: 0;
+    }
+    &__img1 {
+      width: 200px;
+      height: 150px;
+      margin: 0;
+    }
+
+    &__card2 {
+      width: 300px;
+      display: grid;
+      place-items: center;
+      height: 400px;
+    }
+
+    &__lorem2 {
+      margin: 0;
+    }
+
+    &__span2 {
+      margin: 0;
+    }
+    &__img2 {
+      margin: 0;
+      width: 200px;
+      height: 150px;
+    }
+
+    &__card3 {
+      width: 300px;
+      height: 400px;
+      display: grid;
+      place-items: center;
+    }
+
+    &__img3 {
+      width: 200px;
+      height: 150px;
+    }
+
+    &__card4 {
+      flex-direction: column;
+      align-items: center;
+      display: grid;
+      place-items: center;
+      width: 300px;
+    }
+
+    &__img4 {
+      width: 200px;
+      height: 150px;
+    }
+  }
+}

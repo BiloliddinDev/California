@@ -1,0 +1,32 @@
+.save {
+  margin-top: 80px;
+  text-align: center;
+  &__wraper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1, 1fr;
+    gap: 70px;
+  }
+
+  &__heading {
+    font-family: "Readex Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 52px;
+  }
+
+  &__text {
+    font-family: "Readex Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    margin-bottom: 60px;
+  }
+
+  &__card {
+    display: grid;
+    text-align: left;
+  }
+}
